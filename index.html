@@ -7,21 +7,79 @@
     <meta name="description" content="Barberaria Vikings é o seu destino para cortes de cabelo de alta qualidade e serviços de barbearia. Nossos barbeiros profissionais oferecem uma experiência única de estilo viking, combinando técnicas tradicionais com as últimas tendências. Venha para a Barberaria Vikings e experimente o melhor em cuidados masculinos.">
     <meta name="keywords" content="Barberaria Vikings, Barbeiro, Corte de Cabelo, Barbearia, Estilo Viking, Cuidados Masculinos, Tendências de Cabelo, Serviços de Barbearia, Barbeiros Profissionais, Experiência de Barbearia">
     <meta name="author" content="Nome do Autor">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Biblioteca Font Awesome - Icones Redes Sociais  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" /> <!-- Biblioteca Swiper - Carrossel de imagens  -->
-    <title>Barbearia Vikings</title>
+    <title>Vikings Barbearia</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
         $(function(){
             $("header").load("./components/header.html"); 
-            $("footer").load("./components/footer.html"); 
+            $("footer").load("./components/footer.html");
+            $("#about").load("./pages/about.html"); 
+            $("#services").load("./pages/services.html");
+            $("#units").load("./pages/units.html");
+            $("#professionals").load("./pages/professionals.html");
+            $("#subscription").load("./pages/subscription.html");
+            $("#banner").load("./pages/banner.html");
         });
     </script>
 </head>
 <body>
     <header></header>
-    <!-- Aqui vai o conteúdo principal da página -->
+    <main>
+        <section id="home" class="home">
+            <div class="swiper home-slider">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide slide" style="background: url(./assets/images/home/imgHome1.jpg) no-repeat;">
+                        <div class="content">
+                            <span>Onde o estilo encontra a tradição.</span>
+                            <h3>Barbearia de qualidade, para homens de qualidade.</h3>
+                            <a href="#" class="btn">Iniciar</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide slide" style="background: url(./assets/images/home/imgHome2.jpg) no-repeat;">
+                        <div class="content">
+                            <span>Onde o estilo encontra a tradição.</span>
+                            <h3>Barbearia de qualidade, para homens de qualidade.</h3>
+                            <a href="#" class="btn">Iniciar</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide slide" style="background: url(./assets/images/home/imgHome3.jpg) no-repeat;">
+                        <div class="content">
+                            <span>Onde o estilo encontra a tradição.</span>
+                            <h3>Barbearia de qualidade, para homens de qualidade.</h3>
+                            <a href="#" class="btn">Iniciar</a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide slide" style="background: url(./assets/images/home/imgHome4.jpg) no-repeat;">
+                        <div class="content">
+                            <span>Onde o estilo encontra a tradição.</span>
+                            <h3>Barbearia de qualidade, para homens de qualidade.</h3>
+                            <a href="#" class="btn">Iniciar</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+        <section id="about" class="about"></section>
+        <section id="services" class="services"></section>
+        <section id="units" class="units"></section>
+        <section id="professionals" class="professionals"></section>
+        <section id="subscription" class="subscription"></section>
+        <section id="banner" class="banner"></section>
+    </main>
     <footer></footer>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

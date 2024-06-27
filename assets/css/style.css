@@ -1,7 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
+@font-face {
+    font-family: 'Barnier';
+    src: url('../fonts/BERNIERRegular-Regular.otf') format('truetype');
+}
 
 * {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Barnier', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -136,15 +139,17 @@ section {
 }
 
 .home .slide .content span {
-    font-size: 2rem;
-    color: rgb(229,137,49);
+    font-size: 3rem;
+    color: rgb(229, 137, 49);
     display: block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .home .slide .content h3 {
     font-size: 5rem;
     color: #fff;
     padding: 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /*class de swipwer para criar as bolinhas*/
@@ -445,23 +450,26 @@ section {
 }
 
 .banner span {
-    font-size: 2rem;
+    font-size: 3rem;
     color: rgb(229, 137, 49);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 .banner h3 {
     padding-top: 1rem;
-    color: #fff;
+    color: rgb(229, 137, 49);
     text-transform: uppercase;
     font-size: 3.5rem;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 .banner p {
     margin: 1rem auto;
     max-width: 60rem;
-    font-size: 1.5rem;
-    color: #aaa;
+    font-size: 2.0rem;
+    color: rgb(229, 137, 49);
     line-height: 2;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
 }
 .review {
     display: flex;
@@ -537,61 +545,6 @@ section {
     color: rgb(229,137,49);
 }
 
-.blogs .slide {
-    background: #111;
-    margin-bottom: 7rem;
-}
-
-.blogs .slide:hover .image img {
-    transform: scale(1.1);
-}
-
-.blogs .slide .image {
-    height: 25rem;
-    width: 100%;
-    overflow: hidden;
-}
-.blogs .slide .image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.blogs .slide .content {
-    padding: 2rem;
-}
-
-.blogs .slide .content .link {
-    padding-bottom: 1.5rem;
-    font-size: 1.5rem;
-}
-
-.blogs .slide .content .link a {
-    color: rgb(229,137,49);
-}
-
-.blogs .slide .content .link a:hover {
-    color: #fff;
-}
-
-.blogs .slide .content .link span {
-    color: #fff;
-    padding: 0 1rem;
-}
-
-.blogs .slide .content h3 {
-    font-size: 2rem;
-    color: #fff;
-    line-height: 1.5;
-}
-
-.blogs .slide .content p {
-    font-size: 1.5rem;
-    color: #aaa;
-    line-height: 2;
-    padding: 1rem 0;
-}
-
 .footer .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -612,7 +565,7 @@ section {
 }
 
 .footer .box-container .box .links:hover {
-    color: rgb(229,137,49);
+    color: rgb(229, 137, 49);
 }
 
 .footer .box-container .box p {
@@ -622,8 +575,8 @@ section {
 }
 
 .footer .box-container .box p i {
-    padding-right: .5rem;
-    color: rgb(229,137,49);
+    padding-right: 0.5rem;
+    color: rgb(229, 137, 49);
 }
 
 .footer .box-container .box .share {
@@ -638,19 +591,21 @@ section {
     color: #fff;
     background: #111;
     border-radius: 50%;
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     text-align: center;
 }
 
 .footer .box-container .box .share a:hover {
-    background: rgb(229,137,49);
+    background: rgb(229, 137, 49);
 }
 
 .footer .box-container .box form {
     margin-left: 2rem;
 }
 
-.footer .box-container .box form .email {
+.footer .box-container .box form .email,
+.footer .box-container .box form .nome,
+.footer .box-container .box form .mensagem {
     margin-bottom: 1rem;
     width: 100%;
     background: #111;
@@ -659,6 +614,7 @@ section {
     color: #fff;
     text-transform: none;
 }
+
 /*Responsividade*/
 @media (max-width: 991px) {
     html {

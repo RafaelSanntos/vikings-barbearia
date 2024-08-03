@@ -615,6 +615,28 @@ section {
     text-transform: none;
 }
 
+/* Aumenta o tamanho da fonte na página de agendamento */
+#appointment-form label,
+#appointment-form input,
+#appointment-form select,
+#appointment-form button,
+#appointments-table {
+    font-size: 2rem;
+}
+
+/* Adiciona cor dos campos da tabela para branco */
+#appointments-table th,
+#appointments-table td {
+    color: #fff;
+}
+
+/* Adiciona cor dos títulos da tabela para branco*/
+#appointment-form label,
+#appointments-table th,
+h2 {
+    color: #fff;
+}
+
 /*Responsividade*/
 @media (max-width: 991px) {
     html {
@@ -688,9 +710,20 @@ section {
     .services .box-container .box.second {
         flex-flow: column;
     }
+
+    #appointment-form,
+    #appointments-table {
+        font-size: 1.6rem; /* Ajuste este valor conforme necessário */
+    }
 }
+
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+
+    #appointment-form,
+    #appointments-table {
+        font-size: 1.4rem; /* Ajuste este valor conforme necessário */
     }
 }

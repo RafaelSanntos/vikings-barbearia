@@ -1,13 +1,38 @@
 $(function(){
     $("header").load("./components/header.html"); 
     $("footer").load("./components/footer.html");
-    $("#about").load("./pages/about.html"); 
     $("#services").load("./pages/services.html");
     $("#units").load("./pages/units.html");
     $("#professionals").load("./pages/professionals.html");
     $("#subscription").load("./pages/subscription.html");
     $("#banner").load("./pages/banner.html");
     
+    // Adiciona o ouvinte de evento ao botão "Ler Mais"
+    $(document).on('click', '.btn', function(event) {
+        event.preventDefault();
+        
+        // Verifica o texto do botão
+        if (this.textContent === 'Ler Mais') {
+            // Esconde o botão "Ler Mais"
+            this.style.display = 'none';
+
+            // Usando Ajax para carregar aboutMore.html
+            fetch('./pages/aboutMore.html')
+                .then(response => response.text())
+                .then(data => {
+                    var boxContainer = document.querySelector('#about .box-container');
+                    boxContainer.innerHTML = data;
+                })
+                .catch(error => console.error('Erro:', error));
+        } else if (this.textContent === 'Voltar') {
+            // Carrega o conteúdo da seção #about
+            $("#about").load("./pages/about.html", function() {
+                // Mostra o botão "Ler Mais"
+                $('.btn').style.display = 'block';
+            });
+        }
+    });
+
     let swiperReviw = new Swiper(".review-slider", {
         spaceBetween: 20,
         grabCursor: true,

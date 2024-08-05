@@ -260,6 +260,20 @@ section {
     flex-flow: column-reverse;
 }
 
+/* Usado para inverter a imagem do box second - Mobile */
+.units .box.second {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.units .box.second .content {
+    order: 1;
+}
+
+.units .box.second .image {
+    order: 2;
+}
+
 .units .box-container .box:hover .image img,
 .services .box-container .box:hover .image img {
     transform: scale(1.1);
@@ -476,6 +490,7 @@ section {
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
+    overflow: auto;
 }
 
 .review .information {
@@ -713,7 +728,7 @@ h2 {
 
     #appointment-form,
     #appointments-table {
-        font-size: 1.6rem; /* Ajuste este valor conforme necessário */
+        font-size: 1.6rem;
     }
 }
 
@@ -724,6 +739,16 @@ h2 {
 
     #appointment-form,
     #appointments-table {
-        font-size: 1.4rem; /* Ajuste este valor conforme necessário */
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .units .box.second .content {
+        order: 2;
+    }
+
+    .units .box.second .image {
+        order: 1;
     }
 }

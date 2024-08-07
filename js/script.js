@@ -33,6 +33,11 @@ $(function(){
         }
     });
 
+    // Script para o menu hambúrguer
+    $(document).on('click', '#menu-btn', function() {
+        $('.navbar').toggleClass('active');
+    });
+
     let swiperReviw = new Swiper(".review-slider", {
         spaceBetween: 20,
         grabCursor: true,
